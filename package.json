@@ -2,10 +2,11 @@
   "name": "vercel25",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "vercel-build": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -17,8 +18,6 @@
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
-    "node.js": "^0.0.1-security",
-    "npm": "^11.5.2",
     "pg": "^8.16.3"
   }
 }
