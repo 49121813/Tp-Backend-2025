@@ -1,0 +1,17 @@
+CREATE TABLE usuario (
+  id SERIAL PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  password VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE cancion (
+  id SERIAL PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE escucha (
+  id SERIAL PRIMARY KEY,
+  user_id INT REFERENCES usuario(id) ON DELETE CASCADE,
+  cancion_id INT REFERENCES cancion(id) ON DELETE CASCADE,
+  reproducir BOOLEAN DEFAULT FALSE
+);
